@@ -22,6 +22,11 @@ class Cdown(object):
         assert _year is not None
 
         def _get(url, fpath):
+
+            _ws = os.path.abspath(os.path.dirname(fpath))
+            if not os.path.exists(_ws):
+                os.makedirs(_ws)
+
             _r = requests.get(url)
 
             with open(fpath, 'wb') as _file:
