@@ -48,7 +48,7 @@ class Cdown(object):
 
             for fips in Cdown.state_fips:
                 _file = f'tl_{_year}_{fips:02}_place.zip'
-                _url = f'{Cdown.root_url}/TIGER{_year}/{_file}'
+                _url = f'{Cdown.root_url}/TIGER{_year}/PLACE/{_file}'
                 _fpath = os.path.join(_out_ws, _file)
 
                 _get(url=_url, fpath=_fpath)
